@@ -5,20 +5,12 @@ import { FadeUp } from "../ui/FadeUp";
 
 export function Stats() {
   return (
-    <div
-      style={{
-        background: COLORS.ink,
-        display: "flex",
-        justifyContent: "space-around",
-        flexWrap: "wrap",
-        gap: "1rem",
-        padding: "2.5rem 3rem",
-      }}
-    >
+    <div className="stats-bar" style={{ background: COLORS.ink }}>
       {portfolioData.stats.map((stat, index) => (
         <FadeUp key={stat.label} delay={index * 80}>
-          <div style={{ textAlign: "center", padding: "0 1rem" }}>
+          <div className="stats-bar__item" style={{ textAlign: "center", padding: "0 1rem" }}>
             <span
+              className="stats-bar__value"
               style={{
                 fontFamily: FONTS.serif,
                 fontStyle: "italic",

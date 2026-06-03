@@ -1,12 +1,13 @@
 import { COLORS } from "../../constants/colors";
 import { portfolioData } from "../../data/portfolio";
+import { Section } from "../layout/Section";
 import { FadeUp } from "../ui/FadeUp";
 import { SectionHeader } from "../ui/SectionHeader";
 import { ExperienceCard } from "./ExperienceCard";
 
 export function Experience() {
   return (
-    <section id="experience" style={{ padding: "6rem 3rem", background: COLORS.paper }}>
+    <Section id="experience" style={{ background: COLORS.paper }}>
       <FadeUp>
         <SectionHeader eyebrow="Career" title="Work" titleEmphasis="Experience" />
       </FadeUp>
@@ -17,6 +18,6 @@ export function Experience() {
           </FadeUp>
         ))}
       </div>
-    </section>
+    </Section>
   );
 }

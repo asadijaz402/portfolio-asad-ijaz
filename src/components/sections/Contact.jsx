@@ -1,6 +1,7 @@
 import { COLORS } from "../../constants/colors";
 import { FONTS } from "../../constants/fonts";
 import { portfolioData } from "../../data/portfolio";
+import { Section } from "../layout/Section";
 import { Button } from "../ui/Button";
 import { FadeUp } from "../ui/FadeUp";
 import { SectionHeader } from "../ui/SectionHeader";
@@ -18,9 +19,9 @@ export function Contact() {
   const links = buildContactLinks(portfolioData);
 
   return (
-    <section
+    <Section
       id="contact"
-      style={{ background: COLORS.accent, padding: "6rem 3rem", textAlign: "center" }}
+      style={{ background: COLORS.accent, textAlign: "center" }}
     >
       <FadeUp>
         <SectionHeader
@@ -41,6 +42,7 @@ export function Contact() {
           Open to exciting full-stack opportunities and freelance projects.
         </p>
         <div
+          className="contact-actions"
           style={{
             display: "flex",
             justifyContent: "center",
@@ -61,6 +63,6 @@ export function Contact() {
           ))}
         </div>
       </FadeUp>
-    </section>
+    </Section>
   );
 }

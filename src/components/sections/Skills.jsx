@@ -1,21 +1,18 @@
 import { COLORS } from "../../constants/colors";
 import { portfolioData } from "../../data/portfolio";
+import { Section } from "../layout/Section";
 import { FadeUp } from "../ui/FadeUp";
 import { SectionHeader } from "../ui/SectionHeader";
 import { SkillGroup } from "./SkillGroup";
 
 export function Skills() {
   return (
-    <section id="skills" style={{ padding: "6rem 3rem", background: COLORS.ink }}>
+    <Section id="skills" style={{ background: COLORS.ink }}>
       <FadeUp>
-        <SectionHeader
-          eyebrow="Expertise"
-          title="Technical"
-          titleEmphasis="Skills"
-          dark
-        />
+        <SectionHeader eyebrow="Expertise" title="Technical" titleEmphasis="Skills" dark />
       </FadeUp>
       <div
+        className="skills-grid"
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
@@ -29,6 +26,6 @@ export function Skills() {
           </FadeUp>
         ))}
       </div>
-    </section>
+    </Section>
   );
 }

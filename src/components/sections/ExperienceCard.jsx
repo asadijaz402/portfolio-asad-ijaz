@@ -9,12 +9,12 @@ export function ExperienceCard({ role, company, period, bullets }) {
 
   return (
     <div
+      className="experience-card"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
         background: COLORS.card,
         border: `1px solid ${hovered ? "#bbb" : COLORS.border}`,
-        padding: "2rem 2.5rem",
         position: "relative",
         overflow: "hidden",
         transition: "border-color 0.2s",

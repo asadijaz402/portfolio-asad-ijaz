@@ -8,9 +8,9 @@ export const portfolioData = {
   linkedin: "https://www.linkedin.com/in/asadijaz402/",
   avatar: "https://avatars.githubusercontent.com/u/69760960?v=4",
   summary:
-    "3+ years building scalable web applications & RESTful APIs. Specialising in NestJS, ReactJS & NodeJS — from real-time features to complex payment integrations.",
+    "4+ years building scalable web applications & RESTful APIs. Specialising in NestJS, ReactJS & NodeJS — from real-time features to complex payment integrations.",
   stats: [
-    { num: "3+", label: "Years Experience" },
+    { num: "4+", label: "Years Experience" },
     { num: "100K+", label: "Users Served" },
     { num: "50%", label: "Dev Time Saved" },
     { num: "30%", label: "Faster APIs" },

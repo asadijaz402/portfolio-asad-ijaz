@@ -16,34 +16,12 @@ export function Hero() {
   const ready = useEntrance(80);
 
   return (
-    <section
-      style={{
-        minHeight: "100vh",
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        alignItems: "center",
-        padding: "8rem 3rem 5rem",
-        gap: "4rem",
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          right: 0,
-          width: "50%",
-          height: "100%",
-          backgroundImage:
-            "repeating-linear-gradient(0deg, transparent, transparent 39px, #ddd8ce 39px, #ddd8ce 40px)",
-          opacity: 0.35,
-          pointerEvents: "none",
-        }}
-      />
+    <section className="hero">
+      <div className="hero__grid-bg" aria-hidden="true" />
 
-      <div style={{ position: "relative", zIndex: 1 }}>
+      <div className="hero__content">
         <div
+          className="hero__eyebrow"
           style={{
             ...entranceStyle(ready, 100),
             fontSize: "11px",
@@ -72,6 +50,7 @@ export function Hero() {
           <em style={{ fontStyle: "italic", color: COLORS.accent }}>Ijaz</em>
         </h1>
         <p
+          className="hero__summary"
           style={{
             ...entranceStyle(ready, 320),
             fontSize: "13px",
@@ -99,17 +78,10 @@ export function Hero() {
         </div>
       </div>
 
-      <div
-        style={{
-          ...entranceStyle(ready, 300),
-          position: "relative",
-          zIndex: 1,
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <div style={{ position: "relative", width: 300, height: 355 }}>
+      <div className="hero__photo-wrap" style={entranceStyle(ready, 300)}>
+        <div className="hero__photo">
           <div
+            className="hero__photo-frame"
             style={{
               position: "absolute",
               top: 16,
@@ -134,11 +106,8 @@ export function Hero() {
             }}
           />
           <div
+            className="hero__badge"
             style={{
-              position: "absolute",
-              bottom: -18,
-              right: -18,
-              zIndex: 2,
               background: COLORS.accent,
               color: "#fff",
               fontSize: "11px",

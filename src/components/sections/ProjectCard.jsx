@@ -8,6 +8,7 @@ export function ProjectCard({ num, title, desc, tech }) {
 
   return (
     <div
+      className="project-card"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{

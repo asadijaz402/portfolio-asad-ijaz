@@ -1,10 +1,11 @@
 import { COLORS } from "../../constants/colors";
 import { FONTS } from "../../constants/fonts";
 
-export function NavLink({ href, children }) {
+export function NavLink({ href, children, onClick }) {
   return (
     <a
       href={href}
+      onClick={onClick}
       style={{
         color: COLORS.muted,
         textDecoration: "none",

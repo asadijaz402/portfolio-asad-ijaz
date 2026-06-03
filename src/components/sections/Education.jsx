@@ -1,6 +1,7 @@
 import { COLORS } from "../../constants/colors";
 import { FONTS } from "../../constants/fonts";
 import { portfolioData } from "../../data/portfolio";
+import { Section } from "../layout/Section";
 import { FadeUp } from "../ui/FadeUp";
 import { PeriodBadge } from "../ui/PeriodBadge";
 import { SectionHeader } from "../ui/SectionHeader";
@@ -9,9 +10,8 @@ export function Education() {
   const { degree, school, year, courses } = portfolioData.education;
 
   return (
-    <section
+    <Section
       style={{
-        padding: "6rem 3rem",
         background: COLORS.card,
         borderTop: `1px solid ${COLORS.border}`,
         borderBottom: `1px solid ${COLORS.border}`,
@@ -22,11 +22,8 @@ export function Education() {
       </FadeUp>
       <FadeUp delay={100}>
         <div
+          className="education-card"
           style={{
-            display: "grid",
-            gridTemplateColumns: "1fr auto",
-            gap: "2rem",
-            alignItems: "start",
             border: `1px solid ${COLORS.border}`,
             padding: "2rem 2.5rem",
             background: COLORS.paper,
@@ -69,6 +66,6 @@ export function Education() {
           <PeriodBadge variant="filled">{year}</PeriodBadge>
         </div>
       </FadeUp>
-    </section>
+    </Section>
   );
 }
